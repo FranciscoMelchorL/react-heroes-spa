@@ -35,7 +35,7 @@ export const SearchPage = () => {
                     <h4>Searching</h4>
                     <hr/>
 
-                    <form onSubmit={onTextSubmit}>
+                    <form onSubmit={onTextSubmit} aria-label='form'>
                         <input
                             type="text"
                             placeholder="Search a hero"
@@ -63,12 +63,14 @@ export const SearchPage = () => {
                     } */}
 
                     <div 
+                        aria-label='search-hero'
                         className="alert alert-primary animate__animated animate__fadeIn" 
                         style={{display: showSearch ? '' : 'none'}}>
                         Search a hero
                     </div>
 
                     <div 
+                        aria-label='no-hero'
                         className="alert alert-danger animate__animated animate__fadeIn" 
                         style={{display: showError ? '' : 'none'}}>
                         No hero with <b>{q}</b>

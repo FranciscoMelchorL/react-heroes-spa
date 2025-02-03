@@ -1,4 +1,5 @@
 import { types } from '../types/types';
+import PropTypes, { object } from 'prop-types';
 
 export const authReducer = (state = {}, action) =>{
     
@@ -19,4 +20,9 @@ export const authReducer = (state = {}, action) =>{
         default:
             return state;
     }
+}
+
+authReducer.propTypes = {
+    state: PropTypes.object,
+    action: PropTypes,object,
 }
